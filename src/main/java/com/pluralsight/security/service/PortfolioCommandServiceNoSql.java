@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
+
 import com.pluralsight.security.entity.CryptoCurrency;
 import com.pluralsight.security.entity.Portfolio;
 import com.pluralsight.security.entity.Transaction;
@@ -12,6 +13,7 @@ import com.pluralsight.security.entity.Type;
 import com.pluralsight.security.model.AddTransactionToPortfolioDto;
 import com.pluralsight.security.repository.CryptoCurrencyRepository;
 import com.pluralsight.security.repository.PortfolioRepository;
+
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

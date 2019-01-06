@@ -1,6 +1,7 @@
 package com.pluralsight.security.entity;
 
 import org.bson.types.ObjectId;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;

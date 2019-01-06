@@ -5,11 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+
 import com.pluralsight.security.entity.CryptoCurrency;
 import com.pluralsight.security.model.CryptoCurrencyDto;
 import com.pluralsight.security.repository.CryptoCurrencyRepository;
+
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

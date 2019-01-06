@@ -1,9 +1,16 @@
 package com.pluralsight.security.service;
 
+import static com.pluralsight.security.entity.Type.BUY;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,6 +18,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
+
 import com.pluralsight.security.entity.CryptoCurrency;
 import com.pluralsight.security.entity.Portfolio;
 import com.pluralsight.security.entity.Transaction;
@@ -18,12 +30,7 @@ import com.pluralsight.security.entity.Type;
 import com.pluralsight.security.model.CryptoCurrencyDto;
 import com.pluralsight.security.model.PortfolioPositionsDto;
 import com.pluralsight.security.model.PositionDto;
-import com.pluralsight.security.repository.CryptoCurrencyRepository;
 import com.pluralsight.security.repository.PortfolioRepository;
-import static com.pluralsight.security.entity.Type.BUY;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PortfolioServiceTest {
@@ -52,6 +59,13 @@ public class PortfolioServiceTest {
 		transactions.add(new Transaction(litecoin, BUY, new BigDecimal("200.1"), new BigDecimal("100.00"), System.currentTimeMillis()));
 		transactions.add(new Transaction(litecoin, Type.SELL, new BigDecimal("201.1"), new BigDecimal("150.00"), System.currentTimeMillis()));
 		portfolio = new Portfolio("snakamoto", transactions);
+		User principle =  mock(User.class);
+		Authentication authentication = mock(Authentication.class);
+		SecurityContext context = mock(SecurityContext.class);
+		when(context.getAuthentication()).thenReturn(authentication);
+		SecurityContextHolder.setContext(context);
+		when(SecurityContextHolder.getContext().getAuthentication().getPrincipal()).thenReturn(principle);
+		when(principle.getUsername()).thenReturn("snakamoto");
 	}
 	
 	@Test

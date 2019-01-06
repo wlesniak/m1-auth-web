@@ -9,6 +9,7 @@ import java.util.Map;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
+
 import com.pluralsight.security.entity.Portfolio;
 import com.pluralsight.security.entity.Transaction;
 import com.pluralsight.security.model.CryptoCurrencyDto;
@@ -17,6 +18,7 @@ import com.pluralsight.security.model.PortfolioPositionsDto;
 import com.pluralsight.security.model.PositionDto;
 import com.pluralsight.security.model.TransactionDetailsDto;
 import com.pluralsight.security.repository.PortfolioRepository;
+
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

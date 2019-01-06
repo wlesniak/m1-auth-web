@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.pluralsight.security.entity.Post;
 import com.pluralsight.security.model.CreateSupportQueryDto;
 import com.pluralsight.security.model.PostDto;
 import com.pluralsight.security.model.SupportQueryDto;
 import com.pluralsight.security.service.SupportQueryService;
+
 import lombok.RequiredArgsConstructor;
 
 @Controller

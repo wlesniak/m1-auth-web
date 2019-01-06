@@ -2,13 +2,16 @@ package com.pluralsight.security.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
+
 import com.pluralsight.security.entity.SupportQuery;
 import com.pluralsight.security.model.PostDto;
 import com.pluralsight.security.model.SupportQueryDto;
 import com.pluralsight.security.repository.SupportQueryRepository;
+
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

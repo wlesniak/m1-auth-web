@@ -1,8 +1,10 @@
 package com.pluralsight.security.entity;
 
 import javax.validation.constraints.Email;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;

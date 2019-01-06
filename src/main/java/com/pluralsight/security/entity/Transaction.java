@@ -1,9 +1,11 @@
 package com.pluralsight.security.entity;
 
 import java.math.BigDecimal;
+
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;

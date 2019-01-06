@@ -1,6 +1,7 @@
 package com.pluralsight.security.model;
 
 import java.math.BigDecimal;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

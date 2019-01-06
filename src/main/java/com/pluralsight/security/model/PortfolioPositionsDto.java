@@ -2,6 +2,7 @@ package com.pluralsight.security.model;
 
 import java.util.List;
 import java.util.Map;
+
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

@@ -2,15 +2,13 @@ package com.pluralsight.security.entity;
 
 import static com.pluralsight.security.entity.Type.BUY;
 import static org.junit.Assert.assertEquals;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import org.junit.Test;
 
-import com.pluralsight.security.entity.CryptoCurrency;
-import com.pluralsight.security.entity.Portfolio;
-import com.pluralsight.security.entity.Transaction;
+import org.junit.Test;
 
 public class PortfolioTest {
 
